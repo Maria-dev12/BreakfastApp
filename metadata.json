@@ -1,0 +1,6 @@
+{
+  "name": "Breakfast App - Recetario Android Studio",
+  "description": "Generador de código nativo Java/XML y emulador interactivo de doble fragmento para la Entrega 2 de la Práctica Universitaria Android.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
