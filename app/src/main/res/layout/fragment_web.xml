@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Fragmento Derecho: Vista Web / Navegador Integrado
+    Implementa EditText para URL, Button de carga y componente WebView
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutWebRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FBF9F9"
+    tools:context=".WebFragment">
+
+    <!-- Encabezado de la Práctica -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F3F3"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANDROID STUDIO LAB • VISTA WEB"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#006E1C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vista Web - Navegador Integrado"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Implementación de android.webkit.WebView y EditText"
+            android:textSize="12sp"
+            android:textColor="#3F4A3C" />
+    </LinearLayout>
+
+    <!-- Barra de Navegación URL + Botón Cargar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/edtUrl"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="https://nutricion-saludable.edu"
+            android:text="https://nutricion-saludable.edu/desayunos"
+            android:textSize="13sp"
+            android:textColor="#1B1C1C"
+            android:inputType="textUri"
+            android:imeOptions="actionGo"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="#F5F3F3" />
+
+        <Button
+            android:id="@+id/btnCargarPagina"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:text="Cargar Página"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#006E1C" />
+    </LinearLayout>
+
+    <!-- Barra de progreso horizontal para carga de página -->
+    <ProgressBar
+        android:id="@+id/progressBarWeb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        android:progressTint="#006E1C" />
+
+    <!-- Estado de Conexión HTTP -->
+    <TextView
+        android:id="@+id/txtWebStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="✔ Página cargada con éxito (HTTP 200 OK) • SSL Activo"
+        android:textSize="11sp"
+        android:textColor="#006E1C"
+        android:background="#EFEDED" />
+
+    <!-- COMPONENTE WEBVIEW PRINCIPAL -->
+    <WebView
+        android:id="@+id/webViewPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder temporal: reemplaza este archivo por una foto real (jpg/png)
+     con el mismo nombre "receta_bowl_avena" cuando la tengas. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#FFF3E0"
+        android:pathData="M0,0h200v200h-200z" />
+    <path
+        android:fillColor="#D7CCC8"
+        android:pathData="M30,100 C30,140 65,160 100,160 C135,160 170,140 170,100Z" />
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M70,95 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M100,90 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M130,95 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+</vector>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder temporal: reemplaza este archivo por una foto real (jpg/png)
+     con el mismo nombre "receta_parfait_yogur" cuando la tengas. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#FCE4EC"
+        android:pathData="M0,0h200v200h-200z" />
+    <path
+        android:fillColor="#F8BBD0"
+        android:pathData="M70,50h60v30h-60z" />
+    <path
+        android:fillColor="#F06292"
+        android:pathData="M65,80h70v25h-70z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,105h80v25h-80z" />
+    <path
+        android:fillColor="#EF9A9A"
+        android:pathData="M55,130h90v25 a10,10 0 0,1 -10,10h-70 a10,10 0 0,1 -10,-10z" />
+</vector>

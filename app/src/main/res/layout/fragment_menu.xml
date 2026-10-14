@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Fragmento Izquierdo: Menú de opciones de navegación
+    Contiene botones verticales con iconos y títulos
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F3F3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- Opción 1: Perfil -->
+        <Button
+            android:id="@+id/btnMenuPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:text="Perfil"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_person"
+            android:drawableTint="#006E1C"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <!-- Opción 2: Fotos -->
+        <Button
+            android:id="@+id/btnMenuFotos"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:text="Fotos"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:drawableTop="@drawable/ic_photo_library"
+            android:drawableTint="#FFFFFF"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <!-- Opción 3: Video -->
+        <Button
+            android:id="@+id/btnMenuVideo"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:text="Video"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_smart_display"
+            android:drawableTint="#006E1C"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <!-- Opción 4: Web -->
+        <Button
+            android:id="@+id/btnMenuWeb"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:text="Web"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_language"
+            android:drawableTint="#006E1C"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+        <!-- Opción 5: Botones -->
+        <Button
+            android:id="@+id/btnMenuBotones"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Botones"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_smart_button"
+            android:drawableTint="#006E1C"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp" />
+
+    </LinearLayout>
+</ScrollView>

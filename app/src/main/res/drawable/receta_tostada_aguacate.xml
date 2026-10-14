@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder temporal: reemplaza este archivo por una foto real (jpg/png)
+     con el mismo nombre "receta_tostada_aguacate" cuando la tengas. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M0,0h200v200h-200z" />
+    <path
+        android:fillColor="#558B2F"
+        android:pathData="M30,120 C30,90 70,70 100,70 C130,70 170,90 170,120 C170,135 150,140 100,140 C50,140 30,135 30,120Z" />
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M90,95 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0" />
+</vector>

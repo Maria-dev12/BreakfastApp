@@ -1,0 +1,12 @@
+<resources>
+    <color name="primary">#006E1C</color>
+    <color name="primary_container">#4CAF50</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="secondary">#005FAF</color>
+    <color name="surface">#FBF9F9</color>
+    <color name="surface_container_low">#F5F3F3</color>
+    <color name="on_surface">#1B1C1C</color>
+    <color name="on_surface_variant">#3F4A3C</color>
+    <color name="tertiary_fixed">#ABF4AC</color>
+    <color name="inverse_surface">#303031</color>
+</resources>

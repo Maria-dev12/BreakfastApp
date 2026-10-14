@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Fragmento Derecho: Fotos / Galería Gastronómica
+    Demostración de ScrollView vertical, ImageView y eventos de clic dinámicos
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewFotos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FBF9F9"
+    tools:context=".FotosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Encabezado del Fragmento -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galería Gastronómica"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#1B1C1C" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Demostración de ScrollView y eventos onClick en ImageView"
+                android:textSize="12sp"
+                android:textColor="#3F4A3C" />
+        </LinearLayout>
+
+        <!-- TARJETA DE DETALLE DE LA IMAGEN SELECCIONADA -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDetalleFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DETALLE DE LA IMAGEN SELECCIONADA:"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#3F4A3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✔ Activo"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#006E1C"
+                        android:background="#ABF4AC"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp" />
+                </LinearLayout>
+
+                <!-- Imagen Principal en Detalle -->
+                <ImageView
+                    android:id="@+id/imgFotoDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/receta_tostada_aguacate"
+                    android:contentDescription="Foto de platillo en detalle" />
+
+                <!-- Título del Platillo -->
+                <TextView
+                    android:id="@+id/txtDetalleTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Tostada con Aguacate y Huevo Poché"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B1C1C" />
+
+                <!-- Descripción Nutricional -->
+                <TextView
+                    android:id="@+id/txtDetalleDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Desayuno balanceado que aporta ácidos grasos saludables, proteínas completas de alto valor biológico y fibra vegetal. Ideal para iniciar la jornada de estudio con energía sostenida."
+                    android:textSize="13sp"
+                    android:textColor="#3F4A3C" />
+
+                <!-- Grilla de Macros / Métricas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#F5F3F3"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calorías"
+                            android:textSize="11sp"
+                            android:textColor="#3F4A3C" />
+                        <TextView
+                            android:id="@+id/txtDetalleCalorias"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="280 kcal"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#006E1C" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#F5F3F3"
+                        android:padding="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tiempo prep."
+                            android:textSize="11sp"
+                            android:textColor="#3F4A3C" />
+                        <TextView
+                            android:id="@+id/txtDetalleTiempo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 min"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#1B1C1C" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="#F5F3F3"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dificultad"
+                            android:textSize="11sp"
+                            android:textColor="#3F4A3C" />
+                        <TextView
+                            android:id="@+id/txtDetalleDificultad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fácil"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#286B33" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECCIÓN DE OPCIONES DEL MENÚ CON EVENTOS ONCLICK -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OPCIONES DEL MENÚ (SCROLLVIEW - 4 RECETAS)"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#3F4A3C"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Tarjeta 1: Tostada Aguacate -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardItemTostada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgThumbTostada"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/receta_tostada_aguacate"
+                    android:contentDescription="Miniatura tostada" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tostada con Aguacate y Huevo"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1B1C1C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pan integral con puré de aguacate y semillas"
+                        android:textSize="11sp"
+                        android:textColor="#3F4A3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="280 kcal • 10 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#006E1C" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta 2: Bowl de Avena -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardItemAvena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgThumbAvena"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/receta_bowl_avena"
+                    android:contentDescription="Miniatura avena" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bowl de Avena con Frutos Rojos"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1B1C1C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avena cocida en leche descremada con arándanos"
+                        android:textSize="11sp"
+                        android:textColor="#3F4A3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="320 kcal • 8 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#006E1C" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta 3: Batido Verde -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardItemBatido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgThumbBatido"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/receta_batido_verde"
+                    android:contentDescription="Miniatura batido" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Batido Verde Energético"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1B1C1C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Espinaca, manzana verde, plátano y coco"
+                        android:textSize="11sp"
+                        android:textColor="#3F4A3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="190 kcal • 5 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#006E1C" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta 4: Parfait Yogur -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardItemParfait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgThumbParfait"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/receta_parfait_yogur"
+                    android:contentDescription="Miniatura parfait" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parfait de Yogur Natural"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1B1C1C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yogur sin azúcar con nueces y miel"
+                        android:textSize="11sp"
+                        android:textColor="#3F4A3C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 kcal • 6 min"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#006E1C" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

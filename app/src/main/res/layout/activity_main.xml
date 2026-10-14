@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Proyecto: Breakfast App - Recetas para un Desayuno Saludable
+    Archivo: activity_main.xml
+    Descripción: Contenedor horizontal con arquitectura de 2 fragmentos (Dual-Pane)
+-->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:background="#FBF9F9"
+    tools:context=".MainActivity">
+
+    <!-- FRAGMENTO IZQUIERDO: Menú lateral de navegación persistente -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_menu_container"
+        android:name="com.example.breakfastapp.MenuFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:background="#F5F3F3"
+        tools:layout="@layout/fragment_menu" />
+
+    <!-- Divisor vertical decorativo y sutil estilo Material -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#E0E0E0" />
+
+    <!-- FRAGMENTO DERECHO: Contenedor dinámico de contenido intercambiable -->
+    <FrameLayout
+        android:id="@+id/fragment_content_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.8"
+        android:background="#FFFFFF" />
+
+</LinearLayout>

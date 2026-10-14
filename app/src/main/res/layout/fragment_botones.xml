@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Fragmento Derecho: Botones y Controles Interactivos
+    Demuestra Button, CheckBox, RadioGroup y Switch actualizando txtResultado
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewBotones"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FBF9F9"
+    tools:context=".BotonesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Botones y Controles"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:layout_marginBottom="12dp" />
+
+        <!-- CONSOLA SIMULADA / TEXTVIEW TXTRESULTADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#303031"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="LOGCAT EMULATOR • TEXTVIEW TXTRESULTADO"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#ABF4AC" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tag: UI_EVENT"
+                    android:textSize="10sp"
+                    android:textColor="#E3E2E2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#1B1C1C"
+                android:padding="8dp"
+                android:fontFamily="monospace"
+                android:text="Última interacción: Esperando evento de usuario..."
+                android:textSize="12sp"
+                android:textColor="#78DC77" />
+        </LinearLayout>
+
+        <!-- SECCIÓN 1: BOTONES ESTÁNDAR -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Botones Estándar (Button / AppCompatButton)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnAccionNormal"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="8dp"
+            android:text="Botón Normal (Acción Primaria)"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#006E1C" />
+
+        <Button
+            android:id="@+id/btnFavorito"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="8dp"
+            android:text="❤ Botón con Icono (Favorito)"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#005FAF" />
+
+        <Button
+            android:id="@+id/btnDeshabilitado"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="16dp"
+            android:text="🚫 Botón Deshabilitado (android:enabled=false)"
+            android:enabled="false"
+            android:textColor="#6F7A6B"
+            android:backgroundTint="#E3E2E2" />
+
+        <!-- SECCIÓN 2: CHECKBOXES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Controles de Selección Múltiple (CheckBox)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/chkBreakfastReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Recordar desayuno diario a las 7:30 AM"
+            android:textSize="13sp"
+            android:textColor="#1B1C1C" />
+
+        <CheckBox
+            android:id="@+id/chkLactoseFree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Incluir recetas sin lactosa"
+            android:textSize="13sp"
+            android:textColor="#1B1C1C" />
+
+        <CheckBox
+            android:id="@+id/chkOfflineMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginBottom="16dp"
+            android:text="Modo offline para recetas descargadas"
+            android:textSize="13sp"
+            android:textColor="#1B1C1C" />
+
+        <!-- SECCIÓN 3: RADIOGROUP / RADIOBUTTON -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Selección Única (RadioGroup / RadioButton)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel de actividad física matutina:"
+            android:textSize="12sp"
+            android:textColor="#3F4A3C"
+            android:layout_marginBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/rgActivityLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbLightActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Ligera (Estudio y clases teóricas)"
+                android:textSize="13sp"
+                android:textColor="#1B1C1C" />
+
+            <RadioButton
+                android:id="@+id/rbModerateActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moderada (Caminata al campus / laboratorio)"
+                android:textSize="13sp"
+                android:textColor="#1B1C1C" />
+
+            <RadioButton
+                android:id="@+id/rbIntenseActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Intensa (Deporte universitario matutino)"
+                android:textSize="13sp"
+                android:textColor="#1B1C1C" />
+        </RadioGroup>
+
+        <!-- SECCIÓN 4: SWITCH / INTERRUPTORES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Interruptores de Estado (Switch / SwitchCompat)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1B1C1C"
+            android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switchNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginBottom="8dp"
+            android:text="Notificaciones de hábitos saludables"
+            android:textSize="13sp"
+            android:textColor="#1B1C1C" />
+
+        <Switch
+            android:id="@+id/switchDataSaver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Modo ahorro de datos móviles"
+            android:textSize="13sp"
+            android:textColor="#1B1C1C" />
+
+    </LinearLayout>
+</ScrollView>

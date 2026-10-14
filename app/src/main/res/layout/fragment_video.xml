@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Fragmento Derecho: Reproductor de Video
+    Utiliza VideoView con MediaController para reproducción multimedia
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewVideo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FBF9F9"
+    tools:context=".VideoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Encabezado de Ciclo de Vida -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#EFEDED"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▶ LIFECYCLE: ONRESUME()"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#006E1C" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recetas en Video"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#1B1C1C" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uso de componente VideoView y MediaController en Android"
+                android:textSize="12sp"
+                android:textColor="#3F4A3C" />
+        </LinearLayout>
+
+        <!-- CONTENEDOR DEL VIDEOVIEW -->
+        <FrameLayout
+            android:id="@+id/videoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#000000"
+            android:layout_marginBottom="14dp">
+
+            <VideoView
+                android:id="@+id/videoViewReceta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <!-- Indicador de recurso cargado -->
+            <TextView
+                android:id="@+id/txtVideoResourceBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="8dp"
+                android:background="#CC303031"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="R.raw.receta_batido_matutino"
+                android:textColor="#ABF4AC"
+                android:textSize="11sp" />
+        </FrameLayout>
+
+        <!-- Botonera de control manual (además del MediaController flotante) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnVideoPlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="Reproducir"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#006E1C" />
+
+            <Button
+                android:id="@+id/btnVideoPause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="Pausar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#005FAF" />
+        </LinearLayout>
+
+        <!-- Datos del Video / Metadata -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desayuno Rápido"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#002107"
+                android:background="#ABF4AC"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/txtVideoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparación de Batido Proteico y Energético Matutino"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#1B1C1C" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Duración: 5 min 40 seg • Formato: MP4 (H.264)"
+                android:textSize="12sp"
+                android:textColor="#3F4A3C" />
+
+            <TextView
+                android:id="@+id/txtVideoDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tutorial paso a paso diseñado para estudiantes universitarios. Explica cómo combinar frutas, semillas de chía y leche vegetal para un desayuno rápido y nutritivo antes de clases."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C" />
+        </LinearLayout>
+
+        <!-- Instrucciones Resumidas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instrucciones resumidas (Paso a paso)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#006E1C"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Carga de ingredientes sólidos: Colocar plátano congelado y frutos rojos en el vaso de la licuadora."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Adición de base líquida: Agregar 250ml de leche o bebida vegetal (almendras, avena o soya)."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Procesado y consistencia: Licuar a velocidad media-alta durante 45 segundos hasta obtener textura homogénea."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

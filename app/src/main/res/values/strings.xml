@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Breakfast App - Recetas Saludables</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_fotos">Fotos</string>
+    <string name="menu_video">Video</string>
+    <string name="menu_web">Web</string>
+    <string name="menu_botones">Botones</string>
+
+    <string name="btn_cargar_pagina">Cargar Página</string>
+    <string name="btn_reproducir">Reproducir</string>
+    <string name="btn_pausar">Pausar</string>
+    <string name="btn_editar_perfil">Editar Información</string>
+</resources>

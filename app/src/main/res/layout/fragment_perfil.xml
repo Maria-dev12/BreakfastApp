@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    Fragmento Derecho: Perfil del Usuario
+    Utiliza ScrollView para garantizar desplazamiento en cualquier pantalla
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewPerfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FBF9F9"
+    tools:context=".PerfilFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Encabezado de Sección -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F3F3"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="#006E1C"
+                    android:contentDescription="Icono de Perfil" />
+
+                <TextView
+                    android:id="@+id/txtHeaderTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Mi Perfil"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B1C1C" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miembro Activo"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#002107"
+                    android:background="#ABF4AC"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Plan Bienestar Matutino • Miembro desde Marzo 2024"
+                android:textSize="12sp"
+                android:textColor="#3F4A3C" />
+        </LinearLayout>
+
+        <!-- Tarjeta de Foto de Perfil y Verificación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <ImageView
+                android:id="@+id/imgFotoPerfil"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/profile_avatar"
+                android:scaleType="centerCrop"
+                android:background="#E9E8E7"
+                android:contentDescription="Foto de perfil del alumno" />
+
+            <TextView
+                android:id="@+id/txtVerificadoBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="✔ Verificado por Nutrición"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#006E1C" />
+        </LinearLayout>
+
+        <!-- Bloque de Información del Usuario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <!-- Nombre Completo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOMBRE COMPLETO"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#6F7A6B" />
+
+            <TextView
+                android:id="@+id/txtNombreCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:text="Carlos Andrés Mendoza Silva"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1B1C1C" />
+
+            <!-- Ocupación -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OCUPACIÓN / PROFESIÓN"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#6F7A6B" />
+
+            <TextView
+                android:id="@+id/txtOcupacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:text="Diseñador Gráfico &amp; Creativo"
+                android:textSize="14sp"
+                android:textColor="#1B1C1C" />
+
+            <!-- Código de Usuario -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CÓDIGO DE USUARIO"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#6F7A6B" />
+
+            <TextView
+                android:id="@+id/txtCodigoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:text="#HB-84920"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#006E1C" />
+
+            <!-- Plan de Alimentación -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAN DE ALIMENTACIÓN"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#6F7A6B" />
+
+            <TextView
+                android:id="@+id/txtPlanAlimentacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:text="Estilo Saludable &amp; Vitalidad"
+                android:textSize="14sp"
+                android:textColor="#1B1C1C" />
+
+            <!-- Objetivo de Salud -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OBJETIVO DE SALUD"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#6F7A6B" />
+
+            <TextView
+                android:id="@+id/txtObjetivoSalud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Desayunos balanceados y energía sostenida"
+                android:textSize="14sp"
+                android:textColor="#1B1C1C" />
+        </LinearLayout>
+
+        <!-- Bloque de Hábitos y Rutinas Matutinas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hábitos y Rutinas Matutinas"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#006E1C"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Hidratación matutina: 500ml de agua natural antes de ingerir alimentos."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Ingesta de proteína limpia y fibra vegetal en cada desayuno."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Desayuno antes de las 9:00 AM para regular el metabolismo circadiano."
+                android:textSize="13sp"
+                android:textColor="#3F4A3C" />
+        </LinearLayout>
+
+        <!-- Resumen de Progreso Semanal / Contadores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#F5F3F3"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_local_fire"
+                app:tint="#006E1C"
+                android:contentDescription="Fuego" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESUMEN DE PROGRESO SEMANAL"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#006E1C" />
+
+                <TextView
+                    android:id="@+id/txtProgresoSemanal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 de 7 días desayunando saludable • 14 recetas guardadas"
+                    android:textSize="13sp"
+                    android:textColor="#1B1C1C" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Botón para Editar Información -->
+        <Button
+            android:id="@+id/btnEditarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Editar Información"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#006E1C" />
+
+    </LinearLayout>
+</ScrollView>
